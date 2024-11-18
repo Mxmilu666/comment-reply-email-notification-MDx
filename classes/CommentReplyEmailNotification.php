@@ -425,7 +425,7 @@ class CommentReplyEmailNotification
             $label   = apply_filters('cren_comment_checkbox_label', __('Notify me via e-mail if anyone answers my comment.' , 'comment-reply-email-notification'));
             $checked = $this->getDefaultChecked() ? 'checked' : '';
 
-            $subscribeToCommentsHtml = '<p class="comment-form-comment-subscribe"><label for="cren_subscribe_to_comment"><input id="cren_subscribe_to_comment" name="cren_subscribe_to_comment" type="checkbox" value="on" ' . $checked . '>' . $label . '</label></p>';
+            $subscribeToCommentsHtml = '<p class="comment-form-comment-subscribe" style="padding-left: 9px;"><label class="mdui-checkbox" for="cren_subscribe_to_comment"><input id="cren_subscribe_to_comment" name="cren_subscribe_to_comment" type="checkbox" value="on" ' . $checked . ' /><i class="mdui-checkbox-icon"></i><label for="cren_subscribe_to_comment">' . $label . '</label></label></p>';
 
             $checkbox = apply_filters( 'cren_comment_subscribe_html', $subscribeToCommentsHtml, $label, $this->getDefaultChecked() );
 
